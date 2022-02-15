@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 18, 78);
+}
+
+#container{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.players {
+    text-align: center;
+    color: white;
+    padding: 3%;
+    flex: 10%;
+}
+
+.one{
+    background-color: rgba(255, 255, 255, 0.198);
+}
+
+.two {
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+.count{
+    background-color: rgba(0, 0, 255, 0.63);
+    border-radius: 2em;
+    width: 40%;
+    border: 1px solid rgba(0, 0, 255, 0.63);
+    margin: auto;
+    margin-block: 15%;
+}
+
+.switch .count {
+    animation-name: backflip;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+ 
+}
+
+@keyframes backflip{
+    25%{
+       border-top: 2.5px solid rgb(255, 255, 255);
+    }
+    50%{
+        border-right: 2.5px solid rgb(255, 255, 255);
+    }
+    75%{
+        border-bottom:  2.5px solid rgb(255, 255, 255);
+    }
+    
+    100%{
+        border-left: 2.5px solid rgb(179, 179, 179);
+    }
+}
+
+.tot-score{
+    font-size: 8vw;
+}
+
+.player{
+    font-size: 4vw;
+}
+
+.count h3{
+    font-size: 4vw;
+}
+
+.current-score{
+    font-size: 3vw;
+    padding-bottom: 5%;
+}
+
+#controls{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 5%;
+}
+
+#controls div{
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+}
+
+.roll, .hold, .newgame, .dice{
+    margin: auto;
+    padding: 1%;
+    border-radius: .5em;
+    width: 22%;
+    background-color: rgba(255, 255, 255, 0.281);
+    cursor: pointer;
+}
+
+.dice{
+    width: 10%;
+}
+
+.dice-img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.roll{
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.newgame{
+    margin-bottom: 5%;
+}
+
+@media screen and (min-width: 701px) {
+    #container{
+        flex-direction: row;
+        margin-top: 6%;
+        position: relative;
+    }
+
+    
+.tot-score{
+    font-size: 4vw;
+}
+
+.player{
+    font-size: 2vw;
+}
+
+.count h3{
+    font-size: 2vw;
+}
+
+.current-score{
+    font-size: 1.5vw;
+}
+
+#controls{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 1%;
+}
+
+#controls div{
+    font-size: 1vw;
+    background-color: rgba(255, 255, 255, .7);
+    color: rgb(0, 0, 0);
+}
+
+
+.roll{
+    margin-top: 5%;
+}
+
+.newgame{
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+.dice-img{
+    width: 50%;
+}
+
+}
